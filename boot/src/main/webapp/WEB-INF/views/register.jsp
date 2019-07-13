@@ -13,6 +13,10 @@ $(function()	{
 		 $('#signUpFrm').attr("method","POST");
 		 $('#signUpFrm').submit();
 	});
+	
+	$('#logInBtn').click(function()	{
+		window.location.replace("${pageContext.servletContext.contextPath}/login") ;
+	});
 });
 </script>
 <!-- Icons font CSS-->
@@ -124,6 +128,9 @@ $(function()	{
                         <div>
                             <button class="btn btn--radius-2 btn--red" id="submitBtn">Register</button>
                         </div>
+                      <div>
+                    <button class="btn btn--radius-2 btn--red" type="button" id="logInBtn">LogIn</button>
+                    </div>
                     </form>
                 </div>
             </div>

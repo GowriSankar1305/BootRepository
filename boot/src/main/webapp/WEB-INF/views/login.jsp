@@ -8,11 +8,6 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script type="text/javascript">
 $(function()	{
-	$('#signUp').click(function()	{
-		$('#form').attr("action","${pageContext.servletContext.contextPath}/register");
-		$('#form').attr("method","POST");
-		$('#form').submit();
-	});
 	$('#logIn').click(function()	{
 		$('#form').attr("action","${pageContext.servletContext.contextPath}/checkuser");
 		$('#form').attr("method","POST");
@@ -186,8 +181,10 @@ body {
               </div>
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="logIn">Sign in</button>
               <hr class="my-4">
-               <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit" id="signUp"><i class="fab fa-google mr-2"></i> Sign Up</button>
               <!--<button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button> -->
+            </form>
+            <form action="${pageContext.servletContext.contextPath}/register" method="POST">
+            <button class="btn btn--radius-2 btn--red" type="submit" id="signUp"> Sign Up</button>
             </form>
           </div>
         </div>

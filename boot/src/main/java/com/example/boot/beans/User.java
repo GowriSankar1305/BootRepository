@@ -30,6 +30,15 @@ public class User {
 	private String mobileNo;
 	@Column(name="state",columnDefinition="varchar(45)",nullable=false)
 	private String state;
+	@Column(name="password",columnDefinition="varchar(250)",nullable=false)
+	private String password;
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public Long getUserId() {
 		return userId;
 	}
@@ -88,6 +97,6 @@ public class User {
 	public String toString() {
 		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId
 				+ ", address=" + address + ", gender=" + gender + ", areaCode=" + areaCode + ", mobileNo=" + mobileNo
-				+ ", state=" + state + "]";
+				+ ", state=" + state + ", password=" + password + "]";
 	}
 }
